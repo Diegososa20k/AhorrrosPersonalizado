@@ -1,0 +1,73 @@
+<div class="container mt-4" ng-controller="empanadasCtrl">
+  <h2>Registro de Ahorros - Empanadas</h2>
+
+  <!-- Total Ahorro -->
+  <div class="alert alert-info">
+    Total Ahorrado: <strong>{{ totalAhorro | currency:"$":0 }}</strong>
+  </div>
+
+  <form name="formAhorro" ng-submit="guardarAhorro()" novalidate>
+    <div class="form-group">
+      <label>Cantidad a ahorrar</label>
+      <input type="number" class="form-control" ng-model="ahorro.cantidad" placeholder="Ej: 5000" required />
+    </div>
+
+    <div class="form-group">
+      <label>Fecha de depósito</label>
+      <input type="date" class="form-control" ng-model="ahorro.fecha" required />
+    </div>
+
+    <div class="form-group">
+      <label>Ubicación del dinero</label>
+      <select class="form-control" ng-model="ahorro.ubicacion" ng-change="onUbicacionChange()">
+        <option value="nu">Nu</option>
+        <option value="efectivo">Efectivo</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+
+    <div class="form-group" ng-show="mostrarNombreCajita">
+      <label>Seleccionar cajita</label>
+      <select class="form-control" ng-model="ahorro.cajita_id" ng-options="c.id as c.nombre for c in cajitasNu">
+        <option value="">-- Selecciona una cajita --</option>
+      </select>
+    </div>
+
+
+
+
+
+    <button type="submit" class="btn btn-success mt-3" ng-disabled="formAhorro.$invalid">
+      Guardar Ahorro
+    </button>
+
+    <a ui-sref="gastos({ tipo: 'empanadas' })" class="btn btn-warning mt-3">
+      Gastos
+    </a>
+
+
+    <div class="mt-3" ng-if="mensaje">
+      <div class="alert" ng-class="mensaje.type">{{ mensaje.text }}</div>
+    </div>
+  </form>
+
+  <!-- Tabla de registros -->
+  <table class="table table-striped mt-4" ng-if="empanadas.length > 0">
+    <thead>
+      <tr>
+        <th>Cantidad</th>
+        <th>Fecha</th>
+        <th>Ubicación</th>
+        <th>Nombre Cajita</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in empanadas">
+        <td>{{ item.cantidad | currency:"$":0 }}</td>
+        <td>{{ item.fecha | date:"dd/MM/yyyy" }}</td>
+        <td>{{ item.ubicacion }}</td>
+        <td>{{ item.nu.nombre || '-' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

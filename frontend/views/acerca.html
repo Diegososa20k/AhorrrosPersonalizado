@@ -1,0 +1,870 @@
+html
+    head
+        link(rel='stylesheet' href='#{estilo.style}')
+        style.            
+            html, body {
+               font-family : 'arial';               
+               box-sizing  : border-box;
+               zoom        : 85%;
+            }
+            .line{
+                width         : 100%;                
+                border-bottom : 1px solid black;
+            }
+
+            @font-face {
+                font-family : "Montserrat Light";
+                src         : url( '/assets/fuentes/Montserrat-Light.ttf') format('truetype');
+                font-weight : normal;
+                font-style  : normal;
+            }
+
+    body(class='text-xs' style="font-family: 'Montserrat-Light', sans-serif;")
+        
+        include ./template/head-jovenes.jade 
+
+        div(style="padding-left: 1.6cm;padding-right: 1.5cm; margin-top: 0.5px; margin-bottom: 1px;; padding-top: -2cm")
+        
+      
+       
+
+
+        div(style="padding-left: 1.6cm;padding-right: 1.5cm; margin-top: 0.5px; margin-bottom: 1px;; padding-top: -2cm")
+            
+            div(class="row")
+
+                    tr
+                        table(style="background-color:  white;")
+                            td(colspan="3" class="text-center" )
+                                p(style="line-height: 1.0; font-weight: bold; color: #902B4B; font-size: 16px;") FORMATO DE ESTUDIO SOCIOECONÓMICO DEL PROGRAMA JÓVENES RENACIMIENTO
+                            
+            div(class="row")
+                div(class="col-md-12 col-lg-12") 
+                                
+                    table(style="border-collapse: separate; border-spacing: 10px 2.5px;")
+                        thead
+                            tr
+                                th(align="left"  style=" width: 400px;" ) FECHA: #{encabezado.lugar_fecha} 
+                                th(align="center" style="border-radius: 5px; width: 20px;" ) CURP
+                                td(class="bordered"  style=" border-radius: 5px; width: 200px;" ) #{solicitante.curp}  
+                                  
+                    
+                        tbody
+                            tr     
+
+        
+            div(class="row")
+
+                        tr
+                            table(style="background-color:  #902B4B;")
+                                td(colspan="3" class="text-center text-md" style="padding: 10px;"  )
+                                    p(style="line-height: 0.8; font-weight: bold; color: white;") I. DATOS GENERALES
+                                
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                    
+                       
+                            table(style="border-collapse: separate; border-spacing: 2px 2px;")
+                                tr
+                                    td(width="40px" colspan="3") NOMBRE COMPLETO:
+                                    td(class="bordered-b text-uppercase") #{solicitante.nombre}
+                                    td(width="5%" colspan="2") EDAD:
+                                    td(class="bordered-b text-uppercase") #{solicitante.edad}
+                                tr
+                                    td(width="20%" colspan="3") FECHA DE NACIMIENTO:
+                                    td(class="bordered-b text-uppercase") #{solicitante.fecha_nacimiento}
+                                    td(width="5%" colspan="2") LUGAR DE NACIMIENTO:
+                                    td(class="bordered-b text-uppercase") #{solicitante.lugar_nacimiento}
+                                    td(style="border-radius: 5px; width: 40px;" colspan="2" align="center"  )
+                                        div(style="font-weight: bold; font-size: 0.8em " ) SEXO #{solicitante.sexo}
+                                        div(style="padding-top: -5cm;") 
+                                            
+                                            if solicitante.sexo === 'Hombre'
+                                                td(class="bordered-es" align="center" style="height:20px; width: 20px; padding: 0; margin: 0; border-radius: 50%; position: relative;") 
+                                                    | H
+                                                    span(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg); font-size: 14px; color: red;") X
+                                            else 
+                                                td(class="bordered-es" align="center" style="height:20px; width: 20px; padding: 0; margin: 0; border-radius: 50%;") H
+                                            
+                                            
+                                            if solicitante.sexo === 'Mujer'
+                                                td(class="bordered-es" align="center" style="height:20px; width: 20px; padding: 0; margin: 0; border-radius: 50%; position: relative;") 
+                                                    | M
+                                                    span(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg); font-size: 14px; color: red;") X
+                                            else 
+                                                td(class="bordered-es" align="center" style="height:20px; width: 20px; padding: 0; margin: 0; border-radius: 50%;") M
+
+                                tr
+                                    td(width="10%") DOMICILIO:
+                                tr
+                                    
+                                    td(class="bordered-b text-uppercase" colspan="8") calle #{direccion.calle} # #{direccion.numero_exterior} exterior y # #{direccion.numero_interior} interior # colonia  #{direccion.colonia},
+                                tr
+                                    td(class="text-center" colspan="2") Calle        
+                                    td(class="text-center" colspan="2") Número      
+                                    td(class="text-center" colspan="2") Cruzamientos      
+                                    td(class="text-center" colspan="2") Colonia/Fraccionamiento/Comisaría
+                                tr
+                                    
+                                    td(class="bordered-b text-uppercase" colspan="6") #{direccion.municipio}, #{direccion.estado} , #{direccion.codigo_postal} 
+                                    td(class="text-center" colspan="1") TELÉFONO:
+                                    td(class="bordered-b text-uppercase" colspan="1")  #{solicitante.telefono}
+
+                                tr
+                                    td(class="text-center" colspan="2") Municipio        
+                                    td(class="text-center" colspan="2") Estado      
+                                    td(class="text-center" colspan="2") C.P      
+                                tr
+                                    td(align="left" colspan="3" style="width: 250px;") ESCUELA DE PROCEDENCIA:
+                                    td(class="bordered-b text-uppercase" colspan="3")  #{respuestas.generales.escuela_de_procedencia}  
+              
+                                 
+                                tr
+
+                                    table(style="border-collapse: separate; width: auto; " align="left")
+                                    
+                                        thead
+                                            tr
+                                        
+                                    
+                                
+                                      
+
+                                        tbody
+                                            tr(class="bordered")
+                                            td(align="left" style="width: 150px;") TRABAJA ACTUALMENTE:
+                                            td(align="left" style="width: 10px;") #{respuestas.generales.trabaja_actualmente}
+                                                
+                                               
+                                            if respuestas.generales.trabaja_actualmente === 'SI'
+                                                td(class="bordered-es checked" align="center" style="height:20px; width: 20px; padding: 0; margin: 0; border-radius: 50%;") ✔
+                                            else
+                                                td(class="bordered-es" align="center" style="height:20px; width: 20px; padding: 0; margin: 0; border-radius: 50%;")
+                                                
+                                                td(align="left" style="width: 10px;") NO
+                                                
+                                                
+                                            if respuestas.generales.trabaja_actualmente === 'NO'
+                                                td(class="bordered-es checked" align="center" style="height:20px; width: 20px; padding: 0; margin: 0; border-radius: 50%;") ✔
+                                            else
+                                                td(class="bordered-es" align="center" style="height:20px; width: 20px; padding: 0; margin: 0; border-radius: 50%;")
+                                                
+                                            td(align="left") INGRESO MENSUAL:
+                                            td(class="bordered-b text-uppercase") #{respuestas.generales.ingreso_mensual || 'No especificado'}
+                                            
+                               
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                    table
+                        thead
+                                                                 
+                                                                  
+                                                    
+                        
+                        tbody
+                            tr
+                                table(style="border-collapse: separate; width: auto;" align="left")
+                                    tbody
+                                        tr(class="bordered" style="padding-top: -5cm;") 
+                                            td(align="left" style="width: 400px;") ¿ACTUALMENTE CUENTAS CON ALGUNA OTRA BECA O APOYO ECONÓMICO?
+                                            td(align="left" style="width: 10px;") SI 
+                                            
+                                           
+                                                if respuestas.generales.actualmente_cuentas_con_alguna_otra_beca_o_apoyo_económico === 'SI'
+                                                    td(class="bordered-es checked" align="center" style="height:20px; width: 20px; padding: 0; margin: 0; border-radius: 50%;") ✔
+                                                else
+                                                    td(class="bordered-es" align="center" style="height:20px; width: 20px; padding: 0; margin: 0; border-radius: 50%;")
+                                                
+                                            td(align="left" style="width: 10px;") NO
+                                            
+                                            
+                                                if respuestas.generales.actualmente_cuentas_con_alguna_otra_beca_o_apoyo_económico === 'NO'
+                                                    td(class="bordered-es checked" align="center" style="height:20px; width: 20px; padding: 0; margin: 0; border-radius: 50%;") ✔
+                                                else
+                                                    td(class="bordered-es" align="center" style="height:20px; width: 20px; padding: 0; margin: 0; border-radius: 50%;")
+                                                    
+
+           
+
+            
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                            table
+                                tr
+                                    td(style="width: 150px;") INSTITUCIÓN O DEPENDENCIA:
+                                    td(class="bordered-b text-uppercase") #{respuestas.generales.institución_o_dependencia || 'No especificada'}
+                                
+                                tr    
+                                    td(style="width: 150px;") MONTO DEL APOYO O BECA:
+                                    td(class="bordered-b text-uppercase") #{respuestas.generales.monto_del_apoyo_o_beca || 'No especificado'}
+                                    td(style="width: 80px;") PERIOCIDAD:
+                                    td(class="bordered-b text-uppercase") #{respuestas.generales.periocidad || 'No especificada'}
+
+            div(class="row")
+
+                tr
+                    table(style="border-top: 1px;")
+                        td(colspan="6")  
+
+                                    
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                            table
+                                tr
+                                    td 
+                                        table
+                                            tr
+                                                td
+
+                                                    table(style="border-collapse: separate; width: auto; " align="left" class="bordered")
+                                                        thead
+                                                            tr     
+                                                        tbody
+                                                            tr(class="bordered" style="padding-top: -5cm;")  
+                                                                td(align="left"  style="width: 140px;" colspan="2") 
+                                                                    strong ESTADO CIVIL
+                                                                td(align="left"  style="width: 140px;" colspan="2") 
+                                                                
+                                                            tr(class="bordered" style="padding-top: -5cm;") 
+
+                                                                    td(align="left"  style="width: 100px;" colspan="4")
+                        
+                                                                        table(style="border-collapse: separate; width: auto; " align="left" )
+                                                                            thead
+                                                                                tr     
+                                                                            tbody
+                                                                                tr 
+                                                                                    if solicitante.estado_civil === 'soltero'
+                                                                                    
+                                                                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") ✔
+                                                                                    else
+                                                                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") 
+
+                                                                                    td(align="left"  style="width: 20px;"   ) Soltero(a)
+
+                                                                                    if solicitante.estado_civil === 'casado'
+
+                                                                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") ✔
+                                                                                    else
+                                                                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+
+                                                                                    td(align="left"  style="width: 20px;"  ) Casado(a)
+
+                                                                                tr 
+                                                                                    if solicitante.estado_civil.toUpperCase() !== 'CASADO' && solicitante.estado_civil.toUpperCase() !== 'SOLTERO'
+                                                                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") ✔
+                                                                                    else 
+                                                                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+
+                                                                                    td(align="left"  style="width: 20px;"   ) Otro
+                                                            tr
+                                                                td(align="left"  style="width: 100px;" colspan="5")
+                    
+                                                                    table(style="border-collapse: separate; width: auto; " align="left" )
+                                                                        thead
+                                                                            tr     
+                                                                        tbody
+                                                                            tr(style="padding-top: -5cm;")  
+                                                                                td(align="left"  style="width: 100px;" colspan="4") Especifique:
+                                                                                if solicitante.estado_civil.toUpperCase() !== 'CASADO' && solicitante.estado_civil.toUpperCase() !== 'SOLTERO'
+                                                                                    td(class="bordered-b text-uppercase" style="width: 100px;" ) #{solicitante.estado_civil}
+                                                                                else 
+                                                                                    td(class="bordered-b text-uppercase" style="width: 100px;" )
+                                                        
+                                                               
+                                    td 
+                                        table
+                                            tr
+                                                td
+
+                                                    table(style="border-collapse: separate; width: auto; " align="left" class="bordered")
+                                                            thead
+                                                                tr     
+                                                            tbody
+                                                                tr(class="bordered" style="padding-top: -5cm;")  
+                                                                    td(align="left"  style="width: 200px;" colspan="2" ) 
+                                                                        strong ¿PADECE ALGUNA DISCAPACIDAD?
+                                                                    td(align="left"  style="width: 10px;") SI
+                                                                    if String(solicitante.discapacidad).toLowerCase() === 'true' || solicitante.discapacidad === true || solicitante.discapacidad === 1
+                                                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") ✔
+                                                                    else
+                                                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") 
+
+
+                                                                    td(align="left"  style="width: 10px;") NO
+                                                                    if String(solicitante.discapacidad).toLowerCase() === 'false' || solicitante.discapacidad === false || solicitante.discapacidad === 0
+                                                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") ✔
+                                                                    else
+                                                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") 
+
+
+                                                        
+                                                                tr(class="bordered" style="padding-top: -5cm;") 
+
+                                                                    td(align="left"  style="width: 100px;" colspan="4")
+                        
+                                                                        table(style="border-collapse: separate; width: auto; " align="left" )
+                                                                            thead
+                                                                                tr     
+                                                                            tbody
+                                                                                tr 
+                                                                                    td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                                                                    td(align="left"  style="width: 20px;"   ) Visual
+                                                                                    td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                                                                    td(align="left"  style="width: 20px;"  ) Física
+                                                                                tr 
+                                                                                    td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                                                                    td(align="left"  style="width: 20px;"   ) Lenguaje
+                                                                                    td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") 
+                                                                                    td(align="left"  style="width: 20px;"  ) Intelectual
+                                                                                tr 
+                                                                                    td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                                                                    td(align="left"  style="width: 20px;"  ) Auditiva
+                                                                                    td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")  
+                                                                                    td(align="left"  style="width: 20px;") Mental
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+
+                                                                                    
+                        tr
+
+                            table(style="border-collapse: separate; width: auto; " align="left")
+                                                                                    
+                                thead
+                                    tr
+                                                                                        
+                                                                                    
+                                                                                
+                                                                                        
+                                tbody
+                                                                    
+                                    tr(class="bordered" style="padding-top: -5cm;") 
+                                        td( align="left" style="width: 150px;") ¿ES JEFE (A) DE FAMILIA?
+                                        td(align="left"  style="width: 10px;") SI
+                                        if respuestas.generales.es_jefe_a_de_familia === 'SI'
+                                             
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") ✔
+                                        else
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            
+                                        td(align="left"  style="width: 10px;") NO
+                                        if respuestas.generales.es_jefe_a_de_familia === 'NO'
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") ✔
+                                        else
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+
+                                        td(align="left"  style="width: 140px;") 
+                                        td( style="width: 120px;") 
+                              
+
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                    tr
+                        
+                        table(style="border-collapse: separate; width: auto; " align="left")
+                                                                                                            
+                            thead
+                                tr                                                                                  
+                            tbody
+                                                                                            
+                                tr(class="bordered" style="padding-top: -5cm;") 
+                                    td( align="left" style="width: 200px;") ¿HABLA ALGUNA LENGUA INDÍGENA?
+                                    td(align="left"  style="width: 10px;") SI
+                                    if respuestas.generales.habla_alguna_lengua_indígena === 'SI'
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") ✔
+                                    else
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+
+                                    td(align="left"  style="width: 10px;") NO
+                                    if respuestas.generales.habla_alguna_lengua_indígena === 'NO'
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") ✔
+                                    else
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") 
+                                    td(align="left"  style="width: 60px;") ¿CUÁL?:
+                                    td(class="bordered-b text-uppercase"  style="width: 120px;") #{respuestas.generales.cuál}
+                                            
+            div(class="row")
+
+                tr
+                    table(style="border-top: 1px;")
+                        td(colspan="3")  
+                                    
+                                        
+            div(class="row")
+
+                 tr
+                    table(style="background-color:  #902B4B;")
+                        td(colspan="3" class="text-center text-md" style="padding: 10px;"  )
+                            p(style="line-height: 0.8; font-weight: bold; color: white;") II. INTEGRANTES DEL HOGAR E INGRESOS ECONÓMICOS
+                                                                                                              
+            
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                                
+                                   
+                    table(class="bordered")
+                        tr(class="bordered")
+                            td(width="40px" class="bordered" colspan="") 
+                                strong NOMBRE COMPLETO
+                            td(width="40px" class="bordered" colspan="") 
+                                strong EDAD
+                            td(width="40px" class="bordered" colspan="") 
+                                strong PARENTESCO
+                            td(width="40px" class="bordered" colspan="") 
+                                strong OCUPACIÓN
+                        
+                        if beneficiarios && beneficiarios.length > 0
+                        
+                            each beneficiario in beneficiarios
+                                tr(class="bordered")
+                                    td(width="40px" class="bordered")= beneficiario.nombre_completo || 'N/A'
+                                    td(width="40px" class="bordered")= beneficiario.edad || 'N/A'
+                                    td(width="40px" class="bordered")= beneficiario.parentesco || 'N/A'
+                                    td(width="40px" class="bordered")= beneficiario.ocupacion || 'N/A'
+                        else
+                        
+                            tr(class="bordered")
+                                td(colspan="4" class="bordered text-center") No se registraron beneficiarios
+            
+
+            
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                                            
+                                               
+                    table
+                        tr
+                            
+
+                           td(width="40px", colspan="2")
+                                table.bordered
+                                    tr.bordered
+                                    td.bordered(colspan="2")
+                                        strong INGRESOS FAMILIARES MENSUALES
+                                    
+                                    //- Iterar sobre los ingresos familiares
+                                    if respuestas.ingresosFamiliares1 && respuestas.ingresosFamiliares1.length
+                                    each ingreso in respuestas.ingresosFamiliares1
+                                        tr.bordered
+                                        td.bordered= ingreso.descripcion
+                                        td.bordered= ingreso.monto
+                                    
+                                    //- Rellenar filas vacías si hay menos de 6 ingresos
+                                    - var ingresosCount = respuestas.ingresosFamiliares1 ? respuestas.ingresosFamiliares1.length : 0
+                                    - var filasVacias = Math.max(ingresosCount)
+                                    - for (var i = 0; i < filasVacias; i++)
+                                        tr.bordered
+                                        
+                                        
+                                    
+                                    //- Fila de total
+                                    tr.bordered
+                                    td.bordered
+                                        strong Total de ingresos
+                                    td.bordered= '$' + (respuestas.totalIngresos1 || '0.00')
+                                                        
+                            
+                                    
+                                   
+                            td(width="40px" colspan="") 
+                                table(class="bordered")
+                                    tr(class="bordered")
+                                        td(width="40px" class="bordered" colspan="2") 
+                                            strong EGRESOS FAMILIARES MENSUALES
+                                     tr(class="bordered")
+                                        td(width="40px" class="bordered" colspan="") Alimentación
+                                        td(width="40px" class="bordered" colspan="") #{respuestas.ingresos.egresos_desglosados.alimentación || '0'}
+                                    tr(class="bordered")
+                                        td(width="40px" class="bordered" colspan="") Renta o pago de casa
+                                        td(width="40px" class="bordered" colspan="") #{respuestas.ingresos.egresos_desglosados.renta_o_pago_de_casa || '0'}
+                                    tr(class="bordered")
+                                        td(width="40px" class="bordered" colspan="") Vestido
+                                        td(width="40px" class="bordered" colspan="") #{respuestas.ingresos.egresos_desglosados.vestido || '0'}
+                                    tr(class="bordered")
+                                        td(width="40px" class="bordered" colspan="") Atención Médica
+                                        td(width="40px" class="bordered" colspan="") #{respuestas.ingresos.egresos_desglosados.atención_médica || '0'}
+                                    tr(class="bordered")
+                                        td(width="40px" class="bordered" colspan="") Educación 
+                                        td(width="40px" class="bordered" colspan="") #{respuestas.ingresos.egresos_desglosados.educación || '0'}
+                                    tr(class="bordered")
+                                        td(width="40px" class="bordered" colspan="") Transporte
+                                        td(width="40px" class="bordered" colspan="") #{respuestas.ingresos.egresos_desglosados.transporte || '0'}
+                                    tr(class="bordered")
+                                        td(width="40px" class="bordered" colspan="") Recreación
+                                        td(width="40px" class="bordered" colspan="") #{respuestas.ingresos.egresos_desglosados.recreación || '0'}
+                                    tr(class="bordered")
+                                        td(width="40px" class="bordered" colspan="") Servicios Del Hogar
+                                        td(width="40px" class="bordered" colspan="") #{respuestas.ingresos.egresos_desglosados.servicios_del_hogar || '0'}
+                                    tr(class="bordered") 
+                                        td(width="40px" class="bordered" colspan="") Otros
+                                        td(width="40px" class="bordered" colspan="") #{respuestas.ingresos.egresos_desglosados.Otros || '0'}
+                                    tr(class="bordered") 
+                                        td(width="40px" class="bordered text-center" colspan="") 
+                                            strong Total de egresos 
+                                        td(width="40px" class="bordered" colspan="") #{respuestas.ingresos.total_egresos_mensuales || '$0'}
+
+
+                        tr
+                      
+                            td(width="80px") 
+                                table
+                                //- Conversión segura a números
+                                - var ingresos = typeof respuestas.totalIngresos1 === 'string' ? parseFloat(respuestas.totalIngresos1.replace(/[^0-9.]/g, '')) || 0 :Number(respuestas.totalIngresos1) || 0
+                                    
+                                - var egresos = typeof respuestas.ingresos.total_egresos_mensuales === 'string' ? parseFloat(respuestas.ingresos.total_egresos_mensuales.replace(/[^0-9.]/g, '')) || 0 :Number(respuestas.ingresos.total_egresos_mensuales) || 0
+                                    
+                                - var diferencia = egresos - ingresos
+
+                                if diferencia > 0
+                                    tr(class="bordered")
+                                        td(width="40px" class="bordered" ) 
+                                            strong Déficit: - $#{diferencia.toFixed(2)}
+                                    tr(class="bordered")
+                                        td(width="40px" class="bordered" ) 
+                                            strong Excedente: 0
+                                else    
+                                    tr(class="bordered")
+                                        td(width="40px" class="bordered" ) 
+                                            strong Déficit: $0
+
+                                    tr(class="bordered")
+                                        td(width="40px" class="bordered") 
+                                            strong Excedente: $#{Math.abs(diferencia).toFixed(2)}
+                            td(width="40px") 
+
+
+                           
+                        
+                     
+                        
+            div(class="row")
+
+                tr
+                    table(style="background-color:  #902B4B;")
+                        td(colspan="3" class="text-center text-md" style="padding: 10px;"  )
+                            p(style="line-height: 0.8; font-weight: bold; color: white;") III. CARACTERÍSTICAS DE LA VIVIENDA
+                               
+
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                    table
+                        tr
+                            td(style="width: 200px;") NÚMERO DE PERSONAS QUE HABITAN EN SU VIVIENDA:
+                            td(class="bordered-b text-uppercase") #{respuestas.vivienda.número_de_personas_que_habitan_en_su_vivienda || 'No especificado'}
+                            td(style="width: 150px;")
+                        tr
+                            td(style="width: 250px;") NÚMERO DE HABITACIONES CON LAS QUE CUENTA SU VIVIENDA:
+                            td(class="bordered-b text-uppercase") #{respuestas.vivienda.número_de_habitaciones_con_las_que_cuenta_su_vivienda || 'No especificado'} 
+                            td(style="width: 100px;")
+
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                     tr
+                                    
+                        table(style="border-collapse: separate; width: auto; " align="left")
+                                                                                                                        
+                            thead
+                                tr                                                                                  
+                            tbody
+                                                                                                        
+                                tr(class="bordered" style="padding-top: -5cm;") 
+                                    td( align="left" style="width: 100px;") LA VIVIENDA ES
+                                    if respuestas.vivienda.la_vivienda_es === 'Propia Pagada'
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Propia Pagada
+
+                                    if respuestas.vivienda.la_vivienda_es === 'Propia Pagando'
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    
+                                    td(align="left"  style="width: 100px;") Propia Pagando 
+
+                                    if respuestas.vivienda.la_vivienda_es === 'Propia Regular'
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Propia Regular
+
+                                    if respuestas.vivienda.la_vivienda_es === 'otro'
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 30px;") Otro
+                                
+                                tr(class="bordered" style="padding-top: -5cm;") 
+                                    td( align="left" style="width: 100px;") 
+                                    if respuestas.vivienda.la_vivienda_es === 'Rentada'
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Rentada
+
+                                    if respuestas.vivienda.la_vivienda_es === 'Prestada'
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Prestada 
+
+                                    if respuestas.vivienda.la_vivienda_es === 'Vive con Familiar'
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    
+                                    td(align="left"  style="width: 100px;") Vive con Familiar
+
+                                    if respuestas.vivienda.la_vivienda_es === 'otro'
+                                        td(align="left"  style="width: 30px;" colspan="2" ) Específique:
+                                        td(class="bordered-b text-uppercase"  style="width: 50px;" colspan="2") #{respuestas.vivienda.la_vivienda_es}
+                                    else 
+                                        td(align="left"  style="width: 30px;" colspan="2" ) Específique:
+                                        td(class="bordered-b text-uppercase"  style="width: 50px;" colspan="2")
+                                tr(class="bordered" style="padding-top: -5cm;") 
+                                    td( align="left" style="width: 100px;") TIPO DE VIVIENDA
+                                    
+                                    if respuestas.vivienda.tipo_de_vivienda === 'Casa Habitación'
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 100px;") Casa Habitación
+
+                                    if respuestas.vivienda.tipo_de_vivienda === 'Departamento'
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Departamento
+
+                                    if respuestas.vivienda.tipo_de_vivienda === 'Otro'
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Otro
+
+                                    if respuestas.vivienda.tipo_de_vivienda === 'Otro'
+                                        td(align="left"  style="width: 30px;" colspan="2") Específique:
+                                        td(class="bordered-b text-uppercase"  style="width: 50px;" colspan="2") #{respuestas.vivienda.tipo_de_vivienda}
+                                    else
+                                        td(align="left"  style="width: 30px;" colspan="2") Específique:
+                                        td(class="bordered-b text-uppercase"  style="width: 50px;" colspan="2")
+                                tr(class="bordered" style="padding-top: -5cm;") 
+                                    td( align="left" style="width: 200px;") MATERIAL DE LA VIVIENDA
+
+                                    if respuestas.vivienda.material_de_la_vivienda.includes('Mampostería')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Mampostería
+
+                                    if respuestas.vivienda.material_de_la_vivienda.includes('Madera')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Madera 
+
+                                    if respuestas.vivienda.material_de_la_vivienda.includes('Lámina')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Lámina
+
+                                    if respuestas.vivienda.material_de_la_vivienda === 'Otro'
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 30px;") Otro
+                                    if respuestas.vivienda.material_de_la_vivienda === 'Otro'
+                                        td(align="left"  style="width: 30px;" ) Específique:
+                                        td(class="bordered-b text-uppercase"  style="width: 50px;" colspan="2") #{respuestas.vivienda.material_de_la_vivienda}
+                                    else 
+                                        td(align="left"  style="width: 30px;" ) Específique:
+                                        td(class="bordered-b text-uppercase"  style="width: 50px;" colspan="2")
+                                tr(class="bordered" style="padding-top: -5cm;") 
+                                    td( align="left" style="width: 100px;") SERVICIOS CON LOS QUE CUENTA
+
+                                    if respuestas.vivienda.servicios_con_los_que_cuenta.includes('Agua')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Agua
+
+                                    if respuestas.vivienda.servicios_con_los_que_cuenta.includes('Luz')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Luz 
+
+                                    if respuestas.vivienda.servicios_con_los_que_cuenta.includes('Drenaje')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Drenaje
+
+                                    if respuestas.vivienda.servicios_con_los_que_cuenta.includes('Internet')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 30px;") Internet
+ 
+
+
+            div(class="row")
+
+                tr
+                    table(style="background-color:  #902B4B;")
+                        td(colspan="3" class="text-center text-md" style="padding: 10px;"  )
+                            p(style="line-height: 0.8; font-weight: bold; color: white;") IV. SERVICIOS PÚBLICOS DE SU COMUNIDAD
+                                                                     
+            
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                    table
+                        tr
+                            td(style="width: 200px;") ¿CON QUÉ SERVICIOS CUENTA LA COMUNIDAD A LA QUE PERTENECE?
+                            
+                                                     
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                    tr
+                                                
+                        table(style="border-collapse: separate; width: auto; " align="left")
+                                                                                                                                    
+                            thead
+                                tr                                                                                  
+                            tbody
+                                                                                                                    
+                                tr(class="bordered" style="padding-top: -5cm;") 
+                                    if respuestas.servicios.con_qué_servicios_cuenta_la_comunidad_a_la_que_pertenece.includes('Escuelas')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 50px;") Escuelas
+
+                                    if respuestas.servicios.con_qué_servicios_cuenta_la_comunidad_a_la_que_pertenece.includes('Pavimento')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 50px;") Pavimento
+
+                                    if respuestas.servicios.con_qué_servicios_cuenta_la_comunidad_a_la_que_pertenece.includes('Alumbrado Público')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 100px;") Alumbrado Público
+
+                                    if respuestas.servicios.con_qué_servicios_cuenta_la_comunidad_a_la_que_pertenece.includes('Agua Potable')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Agua Potable
+
+                                    if respuestas.servicios.con_qué_servicios_cuenta_la_comunidad_a_la_que_pertenece.includes('Transporte Público')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 100px;") Transporte Público
+
+                                    if respuestas.servicios.con_qué_servicios_cuenta_la_comunidad_a_la_que_pertenece.includes('Centro de Salud')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 100px;") Centro de Salud
+
+                                    if respuestas.servicios.con_qué_servicios_cuenta_la_comunidad_a_la_que_pertenece.includes('IMSS')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 30px;") IMSS
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                    table
+                        tr
+                            td(style="width: 200px;") ¿CON QUÉ SERVICIO DE SALUD CUENTA USTED ACTUALMENTE?
+                                                
+                                     
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                    tr
+                                                            
+                        table(style="border-collapse: separate; width: auto; " align="left")
+                                                                                                                                                
+                            thead
+                                tr                                                                                  
+                            tbody
+                                                                                                                                
+                                tr(class="bordered" style="padding-top: -5cm;")
+                                    if respuestas.servicios.con_qué_servicio_de_salud_cuenta_usted_actualmente.includes('IMSS')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 50px;") IMSS
+
+                                    if respuestas.servicios.con_qué_servicio_de_salud_cuenta_usted_actualmente.includes('ISSSTE')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 50px;") ISSSTE
+
+                                    if respuestas.servicios.con_qué_servicio_de_salud_cuenta_usted_actualmente.includes('IMSS Bienestar')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") IMSS Bienestar
+
+                                    if respuestas.servicios.con_qué_servicio_de_salud_cuenta_usted_actualmente.includes('Particular')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 70px;") Particular
+
+                                    if respuestas.servicios.con_qué_servicio_de_salud_cuenta_usted_actualmente.includes('Otro')
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") X 
+                                    else 
+                                        td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                    td(align="left"  style="width: 30px;") Otro 
+                               
+                            
+
+
+
+            div(class="row")
+
+                tr
+                    table
+                        td(colspan="3" class="text-center text-md" style="padding: 10px;"  )
+                            p(style="line-height: 0.8; font-weight: bold; color: white;") 
+                                              
+                
+
+
+            div(class="row")
+                                    
+
+                    tr
+                        table(style="border-collapse: separate; width: auto; border-radius: 20%; " align="center")
+                            tr
+                                td(class="bordered" align="center" style="height:45px; width:450px;  padding-left: 7px; margin: 2PX; font-size: 7px; vertical-align: bottom;" colspan="3") 
+                                    p(style="padding-top: 5px; line-height: 0.8;") NOMBRE Y FIRMA DE LA SOLICITANTE
+                            
+                            tr
+                                td(style="width: 200px;" align="center") Manifiesto que yo, de voluntad propia he incluido en el presente documento la información aquí
+                                                      presentada, y que la misma es completamente verdadera, por ende, acepto toda consecuencia que de ella
+                                                      derive.
+                                            
+               
+                div(style="padding-left: 1.5cm;padding-right: 1cm;  padding-top: 6.5cm")
+         
+                
+
+
+
+
+                
+                
+                div(class="clearfix")
+            include ./template/foot-bienestar.jade
+
+
+
+            

@@ -1,0 +1,71 @@
+<!-- views/usuarios.html -->
+<div class="card">
+  <div class="card-header">
+    <h4 class="mb-0">Lista de Usuarios</h4>
+  </div>
+  <div class="card-body p-0">
+    <div class="mb-3 text-start">
+  <button class="btn btn-success" ng-click="guardarUsuarios()">
+    Guardar usuarios
+  </button>
+</div>
+        <table class="table table-striped mb-0">
+    <thead class="thead-dark">
+        <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Lista de usuarios existentes -->
+        <tr ng-repeat="usuario in usuarios">
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.nombre }}</td>
+        <td>{{ usuario.correo }}</td>
+        <td>
+            <button class="btn btn-danger btn-sm" ng-click="eliminarUsuario(usuario.id)">
+            Eliminar
+            </button>
+
+            <a ui-sref="verUsuario({ id: usuario.id })" title="Ver">
+                <i class="fa fa-eye"></i>
+                </a>
+
+        </td>
+        
+        </tr>
+
+        <!-- Fila fija de input -->
+        <tr>
+        <td></td>
+        <td><input type="text" class="form-control" ng-model="nuevoUsuario.nombre" placeholder="Nombre"></td>
+        <td><input type="email" class="form-control" ng-model="nuevoUsuario.correo" required placeholder="Correo"/></td>
+        <td></td>
+        </tr>
+
+        <!-- Filas dinámicas con más inputs -->
+        <tr ng-repeat="fila in filasDinamicas">
+        <td></td>
+        <td><input type="text" class="form-control" ng-model="fila.nombre" placeholder="Nombre adicional"></td>
+        <td><input placeholder="Correo" type="email" class="form-control" ng-model="fila.correo" required />
+</td>
+        <td></td>
+        </tr>
+
+        <!-- Botón para agregar más filas -->
+        <tr>
+        <td colspan="4" class="text-end">
+            <button class="btn btn-primary btn-sm" ng-click="agregarCampoFila()">
+            Agregar otra fila
+            </button>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+
+
+
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container mt-4" ng-controller="nuCtrl">
+    <h1>Cajitas disponibles en Nu</h1>
+
+    <form name="formNu" ng-submit="guardarCajita()" novalidate>
+        <div class="form-group">
+            <label>Nombre de la cajita</label>
+            <input class="form-control" type="text" placeholder="Ejemplo: Tranajo" ng-model="nu.nombre">
+        </div>
+
+        <div class="form-group">
+            <label>Usuario de a cajita</label>
+            <input placeholder="Ejemplo: Diego" type="text" class="form-control" ng-model="nu.usuario">
+        </div>
+
+        <button type="submit" class="btn btn-success mt-3" ng-disabled="formNu.$invalid">Guardar cajita</button>
+    </form>
+
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Dueño</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody ng-repeat="item in cajitas">
+            <td>{{item.id}}</td>
+            <td>{{item.nombre}}</td>
+            <td>{{item.usuario}}</td>
+            <td>
+                <button class="btn btn-danger btn-sm" ng-click="">
+                    Eliminar
+                </button>
+            </td>
+        </tbody>
+    </table>
+</div>
+

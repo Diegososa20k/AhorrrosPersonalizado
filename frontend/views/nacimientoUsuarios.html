@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Usuarios por año de nacimiento</h2>
+
+  <label for="anioSelect">Selecciona un año:</label>
+  <select id="anioSelect" ng-model="anioSeleccionado" ng-change="filtrarPorAnio()">
+    <option value="1998">1998</option>
+    <option value="1999">1999</option>
+    <option value="2000">2000</option>
+    <option value="2001">2001</option>
+    <option value="2002">2002</option>
+    <option value="2003">2003</option>
+    <option value="2004">2004</option>
+    <option value="2005">2005</option>
+    <option value="todos">Todos</option>
+  </select>
+
+  <table border="1" cellpadding="6" cellspacing="0" style="margin-top: 15px;">
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Fecha de nacimiento</th>
+    </tr>
+    <tr ng-repeat="usuario in usuariosFiltrados">
+      <td>{{ usuario.id }}</td>
+      <td>{{ usuario.nombre }}</td>
+      <td>{{ usuario.correo }}</td>
+      <td>{{ usuario.fecha | date:'yyyy-MM-dd' }}</td>
+    </tr>
+  </table>
+</div>

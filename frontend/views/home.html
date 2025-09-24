@@ -1,0 +1,49 @@
+<div class="container mt-4" ng-controller="homeCtrl">
+  <h2>Progreso de Ahorro</h2>
+
+  <!-- Barra de progreso -->
+  <div class="progress" style="height: 30px;">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+         role="progressbar"
+         aria-valuenow="{{ porcentaje }}"
+         aria-valuemin="0"
+         aria-valuemax="100"
+         style="width: {{ porcentaje }}%">
+      {{ porcentaje | number:1 }}%
+    </div>
+  </div>
+
+<div class="alert alert-info">
+    Total Ahorrado: <strong>{{totalGeneral | currency:"$":0}}</strong>
+    de
+    <strong>{{meta | currency:"$": 0}}</strong>
+</div>
+
+
+  <!-- Texto informativo -->
+  <div class="card mt-3 col-md-6 " style="background-color: #FFDFC4;">
+  <p class="mt-3 text-center  " style="font-size: 1.2rem; color: #2c3e50;">
+    Empanadas: 
+    <strong class="text-success">{{ totalEmpanadas | currency:"$":0 }}</strong> 
+    de 
+    <strong class="text-primary">{{ meta | currency:"$":0 }}</strong>
+  </p>
+</div>
+
+
+  <div class="card mt-3 col-md-6" style="background-color: #C4FFC8;">
+    <p class="mt-3 text-center" style="font-size: 1.2rem; color: #2c3e50;">
+    Trabajo: <strong class="text-success">{{totalTrabajo | currency: "$":0}}</strong>
+    de <strong class="text-primary">{{meta | currency: "$":0}}</strong>
+  </p>
+  </div>
+
+
+  <div class="card mt-3 col-md-6" style="background-color: #EEF7A3;">
+    <p class="mt-3 text-center" style="font-size: 1.2rem; color: #2c3e50;">
+    Extras: <strong class="text-success">{{totalExtras | currency: "$":0}}</strong>
+    de <strong class="text-primary">{{meta | currency: "$":0}}</strong>
+  </p>
+  </div>
+
+</div>

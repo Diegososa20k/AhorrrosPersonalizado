@@ -1,0 +1,40 @@
+<div class="container mt-4" ng-controller="historialGastosCtrl">
+  <h2>Historial de Gastos</h2>
+
+  <!-- Total de todos los gastos -->
+  <div class="alert alert-danger">
+    Total Gastado: <strong>{{ totalGastos | currency:"$":0 }}</strong>
+  </div>
+
+  <!-- Filtro de búsqueda -->
+<div class="form-group">
+  <input type="text" class="form-control" ng-model="busqueda" placeholder="Buscar gasto...">
+</div>
+
+
+  <!-- Tabla de historial -->
+  <table class="table table-sm table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>Cantidad</th>
+        <th>Fecha</th>
+        <th>Origen Ahorro</th>
+        <th>Cajita</th>
+        <th>Concepto</th>
+        <th>Ubicacion</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="g in gastos | filter:busqueda">
+        <td>{{ g.cantidad | currency:"$":0 }}</td>
+        <td>{{ g.fecha | date:"dd/MM/yyyy" }}</td>
+        <td>{{ g.origen_ahorro | uppercase }}</td>
+        <td>{{ g.nu.nombre || '-' }}</td>
+        <td>{{ g.concepto || '-' }}</td>
+        <td>{{ g.ubicacion || '-' }}</td>
+        <td>{{ g.descripcion || '-' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

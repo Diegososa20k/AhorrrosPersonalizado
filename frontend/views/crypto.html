@@ -1,0 +1,523 @@
+html
+    head
+        link(rel='stylesheet' href='#{estilo.style}')
+        style.            
+            html, body {
+               font-family : 'arial';               
+               box-sizing  : border-box;
+               zoom        : 85%;
+            }
+            .line{
+                width         : 100%;                
+                border-bottom : 1px solid black;
+            }
+
+            @font-face {
+                font-family : "Montserrat Light";
+                src         : url( '/assets/fuentes/Montserrat-Light.ttf') format('truetype');
+                font-weight : normal;
+                font-style  : normal;
+            }
+
+    body(class='text-xs' style="font-family: 'Montserrat-Light', sans-serif;")
+        
+        include ./template/head-jovenes.jade 
+
+        div(style="padding-left: 1.6cm;padding-right: 1.5cm; margin-top: 0.5px; margin-bottom: 1px;; padding-top: -2cm")
+        
+      
+       
+
+
+        div(style="padding-left: 1.6cm;padding-right: 1.5cm; margin-top: 0.5px; margin-bottom: 1px;; padding-top: -2cm")
+            
+            div(class="row")
+
+                    tr
+                        table(style="background-color:  white;")
+                            td(colspan="3" class="text-center" )
+                                p(style="line-height: 1.0; font-weight: bold; color: #902B4B; font-size: 16px;") FORMATO DE ESTUDIO SOCIOECONÓMICO DEL PROGRAMA JÓVENES RENACIMIENTO
+                            
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                                
+                    table(style="border-collapse: separate; border-spacing: 2px .5px;")
+                        thead
+                            tr
+                                th(align="left"  style=" width: 400px;" ) FECHA: #{encabezado.lugar_fecha} 
+                                td(class= "bordered-es" style="border-radius: 5px; width: 100px;")
+                                        div(style="font-weight: bold; font-size: 0.8em")  REGIÓN
+                                        div 
+                                td(class= "bordered-es" style="border-radius: 5px; width: 100px;" )
+                                        div(style="font-weight: bold; font-size: 0.8em") MUNICIPIO 
+                                        div #{direccion.municipio}
+                                            
+                                  
+                        
+
+        
+            div(class="row")
+
+                        tr
+                            table(style="background-color:  #902B4B;")
+                                td(colspan="3" class="text-center text-md" style="padding: 10px;"  )
+                                    p(style="line-height: 0.8; font-weight: bold; color: white;") 1. DATOS DEL (DE LA) BECARIO (A)
+                                
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                    
+                       
+                            table(style="border-collapse: separate; border-spacing: 2px 2px;")
+                                tr
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="2")   
+                                        div(style="font-weight: bold; font-size: 0.8em") NOMBRE (S)
+                                        div #{solicitante.nombre}
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="2" )
+                                        div(style="font-weight: bold; font-size: 0.8em") PRIMER APELLIDO
+                                        div 
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="6" )
+                                        div(style="font-weight: bold; font-size: 0.8em") SEGUNDO APELLIDO
+                                        div  
+                           
+                                tr
+                                    td(class= "bordered-es" style="border-radius: 5px;" )
+                                        div(style="font-weight: bold; font-size: 0.8em") FECHA DE NACIMIENTO
+                                        div #{solicitante.fecha_nacimiento}
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="2")
+                                        div(style="font-weight: bold; font-size: 0.8em") LUGAR DE NACIMIENTO
+                                        div #{solicitante.entidad_nacimiento_id}
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="3")
+                                        div(style="font-weight: bold; font-size: 0.8em") CURP
+                                        div #{solicitante.curp}
+                                    td(style="border-radius: 5px;" )
+                                        div(style="font-weight: bold; font-size: 0.8em") SEXO
+                                        div(style="padding-top: -5cm;") 
+                                            
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") H
+                                            
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") M
+
+
+                                tr
+                                    td(class= "bordered-es" style="border-radius: 5px;" )
+                                        div(style="font-weight: bold; font-size: 0.8em") LOCALIDAD
+                                        div #{direccion.localidad}
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="")
+                                        div(style="font-weight: bold; font-size: 0.8em") COLONIA
+                                        div #{direccion.colonia}
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="2")
+                                        div(style="font-weight: bold; font-size: 0.8em") CALLE
+                                        div #{direccion.calle}
+                                    td(class= "bordered-es" style="border-radius: 5px;")
+                                        div(style="font-weight: bold; font-size: 0.8em") # EXT
+                                        div #{direccion.numero_exterior}
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="2")
+                                        div(style="font-weight: bold; font-size: 0.8em") # INT
+                                        div #{direccion.numero_interior}
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="2")
+                                        div(style="font-weight: bold; font-size: 0.8em") C.P
+                                        div #{direccion.codigo_postal}
+                                tr
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="2")
+                                        div(style="font-weight: bold; font-size: 0.8em") REFERENCIA 1
+                                        div  #{direccion.referencia_1}
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="7")
+                                        div(style="font-weight: bold; font-size: 0.8em") REFERENCIA 2
+                                        div #{direccion.referencia_2}
+                                    
+                                tr
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="3")
+                                        div(style="font-weight: bold; font-size: 0.8em") TIPO DE IDENTIFICACIÓN OFICIAL
+                                        div 
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="6")
+                                        div(style="font-weight: bold; font-size: 0.8em") NÚMERO DE IDENTIFICACIÓN OFICIAL
+                                        div #{solicitante.clave_elector} 
+                                   
+                                tr
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="2")
+                                        div(style="font-weight: bold; font-size: 0.8em") TÉLEFONO 1
+                                        div #{solicitante.telefono} 
+                                   
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="2")
+                                        div(style="font-weight: bold; font-size: 0.8em") TÉLEFONO 2
+                                        div 
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="6")
+                                        div(style="font-weight: bold; font-size: 0.8em") CORREO ELECTRÓNICO
+                                        div #{solicitante.correo} 
+                                   
+                                    
+            
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+
+                table(style="border-collapse: separate; border-spacing: 2px 2px;")   
+                    tbody
+                        tr
+                
+                            td    
+                                table( style="border-collapse: separate; width: auto; " align="left")
+                                                
+                                    tbody
+                                
+                                        tr(class="bordered" style="padding-top: -5cm;") 
+                                            td( align="left" style="width: 120px; font-size: 8px;") 1.¿ES BENEFICIARIO DE ALGÚN OTRO PROGRAMA SOCIAL?
+                            td    
+                                table(style="border-collapse: separate; width: auto; " align="left")
+                                                
+                                    tbody
+                                
+                                        tr(class="bordered" style="padding-top: -5cm;")                 
+                                            td(align="left"  style="width: 10px;") SI
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td(align="left"  style="width: 10px;") NO
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") 
+                                            td(align="left"  style="width: 140px; font-size: 8px;") INGRESO MENSUAL:
+                                            
+                            td    
+                                table(style="border-collapse: separate; width: auto; " align="left")
+                                                
+                                    tbody
+                                
+                                        tr(class="bordered" style="padding-top: -5cm;") 
+                                            td( align="left" style="width: 130px; font-size: 8px;") 2.¿HABLAS ALGUNA LENGUA INDIGENA?
+                            td    
+                                table( style="border-collapse: separate; width: auto; " align="left")
+                                                
+                                    tbody
+                                
+                                        tr(class="bordered" style="padding-top: -5cm;")  
+                                            td(align="left"  style="width: 10px;") SI
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td(align="left"  style="width: 10px;") NO
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") 
+                                            td(align="left"  style="width: 140px; font-size: 8px;") INGRESO MENSUAL:
+                                            
+                        tr
+                
+
+                            td    
+                                table(style="border-collapse: separate; width: auto; " align="left")
+                                                
+                                    tbody
+                                
+                                        tr(class="bordered" style="padding-top: -5cm;") 
+                                            td( align="left" style="width: 120px; font-size: 8px;") 3.¿ERES JEFE (A) DE FAMILIA?
+                            td    
+                                table(style="border-collapse: separate; width: auto; " align="left")
+                                                
+                                    tbody
+                                
+                                        tr(class="bordered" style="padding-top: -5cm;") 
+                                            td(align="left"  style="width: 10px;") SI
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td(align="left"  style="width: 10px;") NO
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") 
+                                            td(align="left"  style="width: 140px; font-size: 8px;") INGRESO MENSUAL:
+                                            
+                            td    
+                                table(style="border-collapse: separate; width: auto; " align="left")
+                                                
+                                    tbody
+                                
+                                        tr(class="bordered" style="padding-top: -5cm;") 
+                                            td( align="left" style="width: 130px; font-size: 8px;") 4.¿TÚ O ALGÚN INTEGRANTE DE TU FAMILIA PADECE ALGUNA DISCAPACIDAD?
+                            td    
+                                table(style="border-collapse: separate; width: auto; " align="left")
+                                                
+                                    tbody
+                                
+                                        tr(class="bordered" style="padding-top: -5cm;") 
+                                            td(align="left"  style="width: 10px;") SI
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td(align="left"  style="width: 10px;") NO
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") 
+                                            td(align="left"  style="width: 140px; font-size: 8px;") INGRESO MENSUAL:
+                                             
+            
+                                    
+                                        
+            div(class="row")
+
+                 tr
+                    table(style="background-color:  #902B4B;")
+                        td(colspan="3" class="text-center text-md" style="padding: 10px;"  )
+                            p(style="line-height: 0.8; font-weight: bold; color: white;") 2. DATOS DE LA ESCUELA
+            
+                            
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+
+                table(style="border-radius: 5px;" )   
+                    tbody
+                        tr
+                            td
+                                table(style="border-collapse: separate; width: auto; " align="left")   
+                                    tbody
+                                        tr(class="bordered" style="padding-top: -5cm;") 
+                                            td( align="left" style="width: 150px;") CLAVE DE LA ESCUELA (CCT)
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 30%;")
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 30%;")
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 30%;")
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 30%;") 
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 30%;")
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 30%;") 
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 30%;")
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 30%;") 
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 30%;")
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 30%;") 
+                                            td(class= "bordered-es" style="border-radius: 5px; width: 600px; " colspan="3")
+                                                div(style="font-weight: bold; font-size: 0.8em ") NOMBRE DE LA ESCUELA
+                                                div 
+                
+
+
+                            
+            div(class="row bordered-es" style="border-radius: 5px;")
+                div(class="col-md-12 col-lg-12")
+
+                table(style="border-radius: 5px;" )   
+                    tbody
+                        tr
+                            td
+                                table(style="border-collapse: separate; width: auto; " align="left")   
+                                    tbody
+                                        tr(class="bordered" style="padding-top: -5cm;") 
+                                            td( align="left" style="width: 170px; font-size: 8px;") MATRÍCULA ESCOLAR
+                                            td(class="bordered-es" align="center" style="height:15px; width: 15px;  padding: 0; margin: 0; border-radius: 30%;")
+                                            td(class="bordered-es" align="center" style="height:15px; width: 15px;  padding: 0; margin: 0; border-radius: 30%;")
+                                            td(class="bordered-es" align="center" style="height:15px; width: 15px;  padding: 0; margin: 0; border-radius: 30%;")
+                                            td(class="bordered-es" align="center" style="height:15px; width: 15px;  padding: 0; margin: 0; border-radius: 30%;") 
+                                            td(class="bordered-es" align="center" style="height:15px; width: 15px;  padding: 0; margin: 0; border-radius: 30%;")
+                                            td(class="bordered-es" align="center" style="height:15px; width: 15px;  padding: 0; margin: 0; border-radius: 30%;") 
+                                            td(class="bordered-es" align="center" style="height:15px; width: 15px;  padding: 0; margin: 0; border-radius: 30%;")
+                                            td(class="bordered-es" align="center" style="height:15px; width: 15px;  padding: 0; margin: 0; border-radius: 30%;") 
+                                            td(class="bordered-es" align="center" style="height:15px; width: 15px;  padding: 0; margin: 0; border-radius: 30%;")
+                                            td(class="bordered-es" align="center" style="height:15px; width: 15px;  padding: 0; margin: 0; border-radius: 30%;")
+                                            td(  align="left" style="width: 130px; font-size: 8px;") TIPO DE PERIODO
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td( align="left" style="width: 45px; font-size: 8px;") BIMESTRE
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td( align="left" style="width: 45px; font-size: 8px;") TRIMESTRE
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td( align="left" style="width: 55px; font-size: 8px;") CUATRIMESTRE
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td( align="left" style="width: 50px; font-size: 8px;") SEMESTRE
+             
+
+            
+
+                table(style="border-radius: 5px;" )   
+                    tbody
+                        tr
+                            td
+                                table(style="border-collapse: separate; width: auto; " align="left")   
+                                    tbody
+                                        tr(class="bordered" style="padding-top: -5cm;") 
+                                            td( align="left" style="width: 70px; font-size: 8px;") PERIODO
+                                            td( align="left" style="width: 10px;") 1°
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td( align="left" style="width: 10px;") 2°
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td( align="left" style="width: 10px;") 3°
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td( align="left" style="width: 10px;") 4°
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td( align="left" style="width: 10px;") 5° 
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td( align="left" style="width: 10px;") 6°
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td( align="left" style="width: 10px;") 7° 
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td( align="left" style="width: 10px;") 8°
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td( align="left" style="width: 10px;") 9° 
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td( align="left" style="width: 10px;") 10°
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;")
+                                            td(align="left"  style="width: 70px; font-size: 8px;") CARRERA:
+                                            td(class="bordered-b text-uppercase"  style="width: 100px;") 
+
+            div(class="row")
+
+                tr
+                    table(style="border-top: 1px;")
+                        td(colspan="3")  
+                                    
+                                        
+            div(class="row")
+
+                 tr
+                    table(style="background-color:  #902B4B;")
+                        td(colspan="3" class="text-center text-md" style="padding: 10px;"  )
+                            p(style="line-height: 0.8; font-weight: bold; color: white;") 3. EN CASO DE SER MENOR DE EDAD EL (LA) BECARIO (A)
+            
+
+            
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+
+                table(style="border-radius: 5px;" )   
+                    tbody
+                        tr
+                            td
+                                table(style="border-collapse: separate; width: auto; " align="left")   
+                                    tbody
+                                        tr(class="bordered" style="padding-top: -5cm;") 
+                                            td(align="left"  style="width: 160px;") DATOS DEL (DE LA) TUTOR (A):
+                                             td(align="left"  style="width: 100px;") PARENTESCO
+                                            td(class="bordered-b text-uppercase"  style="width: 150px;") 
+                                            td(class= "bordered-es" style="border-radius: 5px; width: 500px; " colspan="3")
+                                                div(style="font-weight: bold; font-size: 0.8em ") CURP:
+                                                div                 
+
+
+
+            
+                                                
+
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                    
+                       
+                            table(style="border-collapse: separate; border-spacing: 2px 2px;")
+                                tr
+                                    td(class= "bordered-es" style="border-radius: 5px;" )   
+                                        div(style="font-weight: bold; font-size: 0.8em") NOMBRE (S)
+                                        div 
+                                    td(class= "bordered-es" style="border-radius: 5px;"  )
+                                        div(style="font-weight: bold; font-size: 0.8em") PRIMER APELLIDO
+                                        div 
+                                    td(class= "bordered-es" style="border-radius: 5px;" )
+                                        div(style="font-weight: bold; font-size: 0.8em") SEGUNDO APELLIDO
+                                        div 
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                    
+                       
+                            table(style="border-collapse: separate; border-spacing: 2px 2px;")
+                                tr
+                                    td(style="border-radius: 5px;" )
+                                        div(style="font-weight: bold; font-size: 0.8em" align="center") SEXO
+                                        div(style="padding-top: -5cm;") 
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") H
+                                            
+                                            td(class="bordered-es" align="center" style="height:20px; width: 20px;  padding: 0; margin: 0; border-radius: 50%;") M
+
+                                    td(class= "bordered-es" style="border-radius: 5px;" )   
+                                        div(style="font-weight: bold; font-size: 0.8em") FECHA DE NACIMIENTO
+                                        div 
+                                    td(class= "bordered-es" style="border-radius: 5px;"  )
+                                        div(style="font-weight: bold; font-size: 0.8em") LUGAR DE NACIMIENTO
+                                        div 
+                                    td(class= "bordered-es" style="border-radius: 5px;" )
+                                        div(style="font-weight: bold; font-size: 0.8em") TELÉFONO
+                                        div 
+
+            div(class="row")
+                div(class="col-md-12 col-lg-12")
+                    
+                       
+                            table(style="border-collapse: separate; border-spacing: 2px 2px;")
+                                tr
+                                    td(class= "bordered-es" style="border-radius: 5px;" )   
+                                        div(style="font-weight: bold; font-size: 0.8em") MUNICIPIO
+                                        div 
+                                    td(class= "bordered-es" style="border-radius: 5px;"  )
+                                        div(style="font-weight: bold; font-size: 0.8em") LOCALIDAD
+                                        div 
+                                    td(class= "bordered-es" style="border-radius: 5px;" )
+                                        div(style="font-weight: bold; font-size: 0.8em") CALLE
+                                        div
+                                    td(class= "bordered-es" style="border-radius: 5px;" )
+                                        div(style="font-weight: bold; font-size: 0.8em") # EXT
+                                        div
+                                    td(class= "bordered-es" style="border-radius: 5px;" )
+                                        div(style="font-weight: bold; font-size: 0.8em") # INT
+                                        div
+                                    td(class= "bordered-es" style="border-radius: 5px;" )
+                                        div(style="font-weight: bold; font-size: 0.8em") C.P.
+                                        div
+            
+             div(class="row")
+                                    
+
+                            tr
+                                table(style="border-collapse: separate; width: auto;" align="left")
+                                    td(align="center" colspan="3" style="padding-left: 140px; font-size: 10px; vertical-align: bottom; ") 
+                                    td(class="bordered" align="center" style="height:65px; width:450px;  padding-left: 7px; margin: 2PX; font-size: 7px; vertical-align: bottom; border-radius: 5px;" colspan="3") 
+                                        p(style="padding-top: 5px; line-height: 0.8;") NOMBRE Y FIRMA DE LA SOLICITANTE
+        
+                                    td(align="center" style="height:40px; width:50px;  padding: 0; margin: 0; font-size: 7px; vertical-align: bottom;" colspan="2") 
+                                                
+                                    td(class="bordered" align="center" style="height:65px; width:450px;  padding-left: 7px; margin: 2PX; font-size: 7px; vertical-align: bottom; border-radius: 5px;" colspan="3")       
+                                        p(style="line-height: 0.8;") NOMBRE Y FIRMA DEL PERSONAL DE LA SECRETARIA          
+                                    td(align="center" colspan="3" style="padding-left: 140px; font-size: 10px; vertical-align: bottom;") 
+    div(class="row")
+
+                tr
+                    table(style="border-top: 1px;")
+                        td(colspan="3") 
+                           
+    body(class='text-xs' style="font-family: 'Montserrat-Light', sans-serif;")
+        
+    
+
+        div(style="padding-left: 1.6cm;padding-right: 1.5cm; margin-top: 0.5px; margin-bottom: 1px;; padding-top: -2cm")
+        
+        div(style="padding-left: 1.6cm;padding-right: 1.5cm; margin-top: 0.5px; margin-bottom: 1px;; padding-top: -2cm")
+
+     
+            div(class="row")
+                
+                div(class="col-md-12 col-lg-12")
+                                
+                    table(style="border-collapse: separate; border-spacing: 2px .5px;")
+                        thead
+                            tr
+                                th(align="left"  style=" width: 400px;" ) FECHA: #{encabezado.lugar_fecha} 
+                                td(class= "bordered-es" style="border-radius: 5px; width: 100px;")
+                                        div(style="font-weight: bold; font-size: 0.8em")  REGIÓN
+                                        div 
+                                td(class= "bordered-es" style="border-radius: 5px; width: 100px;" )
+                                        div(style="font-weight: bold; font-size: 0.8em") MUNICIPIO
+                                        div 
+                div(class="row")
+                div(class="col-md-12 col-lg-12")
+                    
+                       
+                            table(style="border-collapse: separate; border-spacing: 2px 2px;")
+                                tr
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="2")   
+                                        div(style="font-weight: bold; font-size: 0.8em") NOMBRE (S)
+                                        div 
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="2" )
+                                        div(style="font-weight: bold; font-size: 0.8em") PRIMER APELLIDO
+                                        div 
+                                    td(class= "bordered-es" style="border-radius: 5px;" colspan="6" )
+                                        div(style="font-weight: bold; font-size: 0.8em") SEGUNDO APELLIDO
+                                        div  
+            div(class="row")
+                                    
+
+                            tr
+                                table(style="border-collapse: separate; width: auto;" align="left")
+                                    td(align="center" colspan="3" style="padding-left: 140px; font-size: 10px; vertical-align: bottom; ") 
+                                    td(class="bordered" align="center" style="height:65px; width:450px;  padding-left: 7px; margin: 2PX; font-size: 7px; vertical-align: bottom; border-radius: 5px;" colspan="3") 
+                                        p(style="padding-top: 5px; line-height: 0.8;") NOMBRE Y FIRMA DE LA SOLICITANTE
+        
+                                    td(align="center" style="height:40px; width:50px;  padding: 0; margin: 0; font-size: 7px; vertical-align: bottom;" colspan="2") 
+                                                
+                                    td(class="bordered" align="center" style="height:65px; width:450px;  padding-left: 7px; margin: 2PX; font-size: 7px; vertical-align: bottom; border-radius: 5px;" colspan="3")       
+                                        p(style="line-height: 0.8;") NOMBRE Y FIRMA DEL PERSONAL DE LA SECRETARIA          
+                                    td(align="center" colspan="3" style="padding-left: 140px; font-size: 10px; vertical-align: bottom;") 
+                          
+                div(class="row")
+                                  
+                            tr
+                                table(style="border-collapse: separate; width: auto;" align="center")
+                                    td(align="center") Este programa es público, ajeno a cualquier partido político. Queda prohibido el uso para fines distintos a los establecidos en el programa. 
+                
+                div(class="clearfix")
+            include ./template/foot-jovenes.jade
+            
+            

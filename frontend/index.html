@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyecto de Práctica</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-resource.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <style>
+    body {
+      margin: 0;
+      padding-top: 56px; /* altura navbar */
+    }
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 56px; /* debajo de la navbar */
+      left: 0;
+      background-color: #343a40;
+      padding-top: 10px;
+      transition: width 0.3s;
+      overflow-x: hidden;
+    }
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #fff;
+      display: block;
+      transition: background 0.3s;
+    }
+    .sidebar a:hover {
+      background-color: #495057;
+    }
+    .sidebar.collapsed {
+      width: 60px;
+    }
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+      transition: margin-left 0.3s;
+    }
+    .collapsed + .content {
+      margin-left: 60px;
+    }
+    .sidebar.collapsed a span {
+      display: none;
+    }
+  </style>
+</head>
+<body ng-app="app">
+
+  <!-- Navbar superior -->
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <button class="btn btn-outline-light mr-2" id="toggleBtn">
+      <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand" href="#">Ahorro</a>
+  </nav>
+
+  <!-- Sidebar lateral -->
+  <div class="sidebar" id="sidebar">
+    <a href="#!/home"><i class="fa fa-home"></i> <span>Inicio</span></a>
+    <a href="#!/empanadas"><i class="fa fa-cutlery"></i> <span>Empanadas</span></a>
+    <a href="#!/trabajo"><i class="fa fa-briefcase" aria-hidden="true"></i> <span>Trabajo</span></a>
+    <a href="#!/extras"><i class="fa fa-coffee" aria-hidden="true"></i> <span>Extras</span></a>
+    <a href="#!/gastosPendientes"><i class="fa fa-money" aria-hidden="true"></i> <span>Gastos Pendientes</span></a>
+    <a href="#!/historial"><i class="fa fa-calculator" aria-hidden="true"></i> <span> Historial Gastos</span></a>
+    <a href="#!/dineroOtrasPersonas"><i class="fa fa-calculator" aria-hidden="true"></i> <span> Dinero de otras personas</span></a>
+    <a href="#!/nu"><i class="fa fa-university" aria-hidden="true"></i> <span>Nu Cajitas</span></a>
+    <a href="#!/crypto"><i class="fa fa-area-chart" aria-hidden="true"></i> <span>Crypto</span></a>
+    <a href="#!/acerca"><i class="fa fa-info-circle"></i> <span>Acerca</span></a>
+    <a href="#!/usuarios"><i class="fa fa-users"></i> <span>Usuarios</span></a>
+    <a href="#!/nacimientoUsuarios"><i class="fa fa-calendar"></i> <span>Nacimiento usuarios</span></a>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="content">
+    <div ui-view></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.getElementById('toggleBtn').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('collapsed');
+      document.querySelector('.content').classList.toggle('collapsed');
+    });
+  </script>
+
+  <!-- AngularJS -->
+  <script src="app.js"></script>
+  <script src="controllers/homeCtrl.js"></script>
+  <script src="controllers/acercaCtrl.js"></script>
+  <script src="controllers/usuariosCtrl.js"></script>
+  <script src="controllers/verUsuarioCtrl.js"></script>
+  <script src="controllers/nacimientoUsuariosCtrl.js"></script>
+  <script src="controllers/empanadasCtrl.js"></script>
+  <script src="controllers/trabajoCtrl.js"></script>
+  <script src="controllers/nuCtrl.js"></script>
+  <script src="controllers/cryptoCtrl.js"></script>
+  <script src="controllers/extraCtrl.js"></script>
+  <script src="controllers/gastosDialogCtrl.js"></script>
+  <script src="controllers/historialGastosCtrl.js"></script>
+  <script src="controllers/gastosPendientesCtrl.js"></script>
+  <script src="controllers/dineroOtrasPersonasCtrl.js"></script>
+
+  <script src="services/usuarioFactory.js"></script>
+  <script src="services/empanadasFactory.js"></script>
+  <script src="services/trabajoFactory.js"></script>
+  <script src="services/nuFactory.js"></script>
+  <script src="services/extrasFactory.js"></script>
+  <script src="services/gastosDialogFactory.js"></script>
+  <script src="services/gastosPendientesFactory.js"></script>
+  <script src="services/dineroOtrasPersonasFactory.js"></script>
+
+
+
+</body>
+</html>

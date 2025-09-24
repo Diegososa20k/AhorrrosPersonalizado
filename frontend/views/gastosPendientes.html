@@ -1,0 +1,104 @@
+<div class="container" ng-controller="gastosPendientesCtrl">
+  <h2>Gastos Pendientes</h2>
+
+  <!-- Barras de resumen -->
+<div ng-repeat="g in gastos" class="alert alert-info">
+  {{g.nombre}} - Total: ${{g.total}} 
+  | Abonado: ${{g.abono || 0}} 
+  | Pendiente: ${{g.total - (g.abono || 0)}}
+</div>
+
+
+  <!-- Formulario -->
+  <form ng-submit="guardarGasto()" class="mb-3">
+    <input type="text" ng-model="nuevoGasto.nombre" placeholder="Nombre del gasto" required class="form-control mb-2">
+    <input type="number" ng-model="nuevoGasto.total" placeholder="Total" required class="form-control mb-2">
+    <input type="number" ng-model="nuevoGasto.meses" placeholder="Meses a pagar" min="1" class="form-control mb-2">
+    <textarea ng-model="nuevoGasto.descripcion" placeholder="Descripción" class="form-control mb-2"></textarea>
+    <input type="date" ng-model="nuevoGasto.fecha_pago" required class="form-control mb-2">
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="button" class="btn btn-success" ng-click="abrirDialogAbono()">Abono</button>
+  </form>
+
+
+
+
+    <!-- Filtro global -->
+<div class="form-group mb-3">
+  <input type="text" ng-model="busquedaGlobal" placeholder="Buscar gasto..." class="form-control">
+</div>
+
+
+  <!-- Tabla de gastos -->
+  <table class="table table-bordered mt-4">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Total</th>
+            <th>Mes</th>
+            <th>Pago mensual</th>
+            <th>Descripción</th>
+            <th>Fecha de pago</th>
+            <th>Listo</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="g in gastosExpandido | filter: filtroGlobal">
+    <td>{{g.nombre}}</td>
+    <td>${{g.total}}</td>
+    <td>{{mesEnLetras(g.fecha_pago)}}</td>
+    <td>${{g.pagoMensual}}</td>
+    <td>{{g.descripcion}}</td>
+    <td>{{g.fecha_pago | date:'dd/MM/yyyy'}}</td>
+    <td>
+        <input type="checkbox" ng-checked="g.listoFila" ng-click="toggleListo(g)">
+    </td>
+    <td>
+    <button 
+        ng-if="todosListos(g.gastoId)" 
+        class="btn btn-danger btn-sm" 
+        ng-click="eliminarGasto(g)">
+        Eliminar
+    </button>
+    </td>
+
+</tr>
+
+
+
+    </tbody>
+</table>
+
+
+
+<!-- Modal de Abono -->
+<div class="modal fade" id="modalAbono" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Registrar Abono</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group mb-2">
+          <label>Selecciona gasto:</label>
+          <select ng-model="abono.gastoId" class="form-control" 
+                  ng-options="g.id as g.nombre for g in gastos"></select>
+        </div>
+        <div class="form-group mb-2">
+          <label>Monto del abono:</label>
+          <input type="number" ng-model="abono.monto" min="1" class="form-control">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success" ng-click="guardarAbono()">Guardar Abono</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
