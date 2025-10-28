@@ -1,0 +1,59 @@
+2023-12-07 12:04:36,916 [main] JP.co.esm.caddies.jomt.Jude <INFO> - #### === Professional 7.0.0 / 846701 ==============================
+2023-12-07 12:04:36,920 [main] JP.co.esm.caddies.jomt.Jude <INFO> - start program args []
+2023-12-07 12:04:36,925 [main] JP.co.esm.caddies.jomt.Jude <INFO> - start vm args [-Xms16m, -Xmx512m, -Dsun.java2d.d3d=false]
+2023-12-07 12:04:36,927 [main] JP.co.esm.caddies.jomt.jsystem.k <INFO> - jude property file not found. It is created at the time of the end of application.
+2023-12-07 12:04:39,767 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jview.swing.f <INFO> - maybe initial value of system property.
+2023-12-07 12:04:51,441 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jutil.l <INFO> - stack=5m
+2023-12-07 12:04:51,990 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-07 12:06:52,738 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\mantenimiento_diagrama.asta
+2023-12-07 12:07:12,739 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jsystem.k <INFO> - file: C:\Users\Diego\.astah\professional\JudeP.properties
+2023-12-07 12:07:12,858 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jsystem.k <INFO> - file: C:\Users\Diego\.astah\professional\JudeP.properties
+2023-12-07 12:07:12,863 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jsystem.k <INFO> - file: C:\Users\Diego\.astah\professional\JudeP.properties
+2023-12-07 12:07:12,868 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jsystem.k <INFO> - file: C:\Users\Diego\.astah\professional\JudeP.properties
+2023-12-07 12:07:12,870 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jsystem.k <INFO> - file: C:\Users\Diego\.astah\professional\JudeP.properties
+2023-12-07 12:07:12,871 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jsystem.k <INFO> - file: C:\Users\Diego\.astah\professional\JudeP.properties
+2023-12-07 12:09:09,280 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jsystem.k <INFO> - file: C:\Users\Diego\.astah\professional\JudeP.properties
+2023-12-07 12:09:09,396 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jsystem.k <INFO> - file: C:\Users\Diego\.astah\professional\JudeP.properties
+2023-12-07 12:09:09,402 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jsystem.k <INFO> - file: C:\Users\Diego\.astah\professional\JudeP.properties
+2023-12-07 12:09:19,297 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\mantenimiento_diagrama.asta
+2023-12-07 12:09:20,897 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-07 12:09:26,461 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-07 12:14:53,735 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\mantenimiento_diagrama.asta
+2023-12-07 12:15:36,383 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jcontrol.JudeToImageCommand <INFO> - file: C:\Users\Diego\Desktop\Class Diagram0.png
+2023-12-08 10:09:19,160 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jcontrol.JudeToImageCommand <INFO> - file: C:\Users\Diego\Desktop\esta bin de cita y calificacion.png
+2023-12-08 12:04:31,541 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\mantenimiento_diagrama.asta
+2023-12-08 12:43:16,543 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\mantenimiento_diagrama.asta
+2023-12-08 12:46:15,167 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\mantenimiento_diagrama.asta
+2023-12-08 12:46:56,964 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\mantenimiento_diagrama.asta
+2023-12-08 12:47:55,389 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jcontrol.JudeToImageCommand <INFO> - file: C:\Users\Diego\Desktop\proyecto.png
+2023-12-08 14:22:47,981 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\mantenimiento_diagrama.asta
+2023-12-08 14:25:27,372 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jcontrol.JudeToImageCommand <INFO> - file: C:\Users\Diego\Desktop\proyecto.png
+2023-12-08 15:12:44,026 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\mantenimiento_diagrama_completo.asta
+2023-12-08 15:41:32,418 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\mantenimiento_diagrama_completo.asta
+2023-12-08 15:41:35,678 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-08 15:42:00,303 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-08 15:43:24,933 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-08 15:44:23,573 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-08 15:44:54,334 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-08 15:45:05,533 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-08 15:45:41,665 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-08 15:46:30,883 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-08 15:47:03,799 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\mantenimiento_diagrama_completo.asta
+2023-12-08 15:47:05,978 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-08 15:50:15,858 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jcontrol.JudeToImageCommand <INFO> - file: C:\Users\Diego\Documents\Class Diagram_back.png
+2023-12-08 15:50:21,191 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\Class Diagram0.asta
+2023-12-08 15:50:30,659 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-08 15:52:04,921 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jcontrol.JudeToImageCommand <INFO> - file: C:\Users\Diego\Documents\Class Diagram_Front.png
+2023-12-08 16:05:20,846 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\por si acaso.asta
+2023-12-08 16:05:53,540 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-08 16:05:59,702 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-11 09:19:32,514 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-11 09:19:51,965 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-11 11:48:05,434 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\deagrama front.asta
+2023-12-11 11:48:30,704 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-11 11:49:56,670 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\Class Diagram_Front.asta
+2023-12-11 11:50:29,010 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-11 11:52:33,138 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-11 11:53:02,564 [AWT-EventQueue-0] JP.co.esm.caddies.golf.model.EntityStore <INFO> - saveAs: C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\archivos guardados\Class Diagram_Back.asta
+2023-12-14 11:38:49,938 [AWT-EventQueue-0] JP.co.esm.caddies.uml.mindmap.MMUserIconManager <INFO> - file: C:\Users\Diego\.astah\professional\JudeMMUserIconP.xml
+2023-12-14 11:38:49,949 [AWT-EventQueue-0] JP.co.esm.caddies.jomt.jsystem.k <INFO> - file: C:\Users\Diego\.astah\professional\JudeP.properties

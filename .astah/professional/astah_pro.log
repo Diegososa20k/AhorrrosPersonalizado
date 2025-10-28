@@ -1,0 +1,79 @@
+===========================================================
+astah_pro.log
+date: 07 December 2023 12:04:37 CST
+ver: Professional 7.0.0 / 846701
+java ver: 1.8.0_45
+java vendor: Oracle Corporation
+os name: Windows 8.1
+os ver: 6.3
+look and feel: Windows
+system scale: 133.33%
+===========================================================
+----------------------------------------------------------
+                   System Properties                      
+----------------------------------------------------------
+
+java.runtime.name=Java(TM) SE Runtime Environment
+sun.boot.library.path=C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre\bin
+java.vm.version=25.45-b02
+sun.java2d.d3d=false
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+path.separator=;
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.country=MX
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional
+java.runtime.version=1.8.0_45-b15
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs=C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre\lib\endorsed
+os.arch=amd64
+java.io.tmpdir=C:\Users\Diego\AppData\Local\Temp\
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+user.variant=
+os.name=Windows 8.1
+sun.jnu.encoding=Cp1252
+java.library.path=C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;;C:\Program Files\Microsoft MPI\Bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Users\Diego\AppData\Local\Microsoft\WindowsApps;C:\Users\Diego\AppData\Roaming\Composer\vendor\bin;C:\Users\Diego\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Diego\AppData\Roaming\npm;C:\Program Files\Azure Data Studio\bin;C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre\bin;.
+sun.awt.enableExtraMouseButtons=true
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+os.version=6.3
+user.home=C:\Users\Diego
+user.timezone=America/Mexico_City
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+file.encoding=Cp1252
+java.specification.version=1.8
+java.class.path=C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\astah-pro.jar
+user.name=Diego
+java.vm.specification.version=1.8
+sun.java.command=C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\astah-pro.jar
+java.home=C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre
+sun.arch.data.model=64
+user.language=es
+java.specification.vendor=Oracle Corporation
+awt.toolkit=sun.awt.windows.WToolkit
+java.vm.info=mixed mode
+astah.plugin.enabled=true
+java.version=1.8.0_45
+java.ext.dirs=C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+sun.boot.class.path=C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre\lib\resources.jar;C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre\lib\rt.jar;C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre\lib\sunrsasign.jar;C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre\lib\jsse.jar;C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre\lib\jce.jar;C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre\lib\charsets.jar;C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre\lib\jfr.jar;C:\Users\Diego\Downloads\Nueva carpeta (2)\astah-professional-20220917T195131Z-001\astah-professional\jre\classes
+java.vendor=Oracle Corporation
+astah.edition=professional
+file.separator=\
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+sun.desktop=windows
+sun.cpu.isalist=amd64
+
+----------------------------------------------------------
+LN = null
+----------------------------------------------------------
+
